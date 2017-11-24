@@ -1,0 +1,30 @@
+html {
+	font-size: 62.5%;
+
+	@media (min-width: $grid-breakpoint4) {
+		font-size: 80%;
+	}
+}
+
+body {
+	font-family: $type-font-stack;
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+}
+
+th {
+	font-weight: bold;
+	text-align: left;
+}
+
+button {
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0;
+	cursor: pointer;
+}
+
+a {
+	color: inherit;
+}

@@ -1,0 +1,84 @@
+$grid-breakpoint1: 			500px;
+$grid-breakpoint2: 			750px;
+$grid-breakpoint3: 			1400px;
+$grid-breakpoint4:			2000px;
+
+$grid-gutter-width: 		2.4rem;		 
+
+
+
+
+.grid {
+	display: grid;
+
+	// Default grid: mobile first, 4 columns.
+	grid-template-columns: repeat(4, 1fr);
+	// grid-template-rows: 20.0rem auto;
+	grid-template-areas: 
+		"header header header header"
+		"main main main main"
+		"footer footer footer footer";
+	width: 100%;
+
+	// Breakpoint 1: 8 columns.
+	@media screen and (min-width: $grid-breakpoint1) {
+		grid-template-columns: repeat(8, 1fr);
+		grid-template-areas: 
+			"header header header header header header header header"
+			". . main main main main main main"
+			". . footer footer footer footer footer footer";
+	}
+
+	// Breakpoint 2: 12 columns.
+	@media screen and (min-width: $grid-breakpoint2) {
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-areas: 
+			"header header header header header header header header header header header header"
+			". . . main main main main main main main main ."
+			". . . footer footer footer footer footer footer footer footer footer";
+	}
+
+	// Breakpoint 3: 12 columns, fixed width.
+	// @media screen and (min-width: $grid-breakpoint3) {
+	// 	width: 130.0rem;
+	// 	margin: 0 auto;
+	// }
+
+	// Breakpoint 3: 1 columns, fixed width.
+	@media screen and (min-width: $grid-breakpoint3) {
+		grid-template-columns: 1fr repeat(12, 10.9rem) 1fr;
+		grid-template-areas: 
+			"header header header header header header header header header header header header header header"
+			". . . . main main main main main main main main main ."
+			". . . . footer footer footer footer footer footer footer footer footer footer";
+	}
+}
+
+
+%grid__item {
+	$column-padding: $grid-gutter-width / 2;
+	padding: 0 $column-padding;
+
+	&.bleeds {
+		padding: 0;
+	}
+
+	&.bleeds-left {
+		padding: 0 $column-padding 0 0;
+	}
+
+	&.bleeds-right {
+		padding: 0 0 0 $column-padding;
+	}
+}
+
+
+
+
+.top {
+	grid-area: header;
+	position: sticky;
+	top: 0;
+	left: 0;
+	@extend %grid__item;
+}

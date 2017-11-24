@@ -1,0 +1,58 @@
+// .lab {
+// 	@extend %grid__item;
+// 	grid-column-end: span 4;
+
+
+// 	margin-bottom: 3.2rem;
+
+// 	@media (min-width: $grid-breakpoint1) {
+// 		grid-column-end: span 4;
+// 	}
+
+// 	// @media (min-width: $grid-breakpoint2) {
+// 	// 	grid-column-end: span 4;
+// 	// }
+
+// 	@media (min-width: $grid-breakpoint3) {
+// 		grid-column-end: span 3;
+// 	}
+// }
+
+.lab {
+	@extend %grid__item;
+	grid-column-end: span 4;
+
+	margin-bottom: 3.2rem;
+	cursor: pointer;
+
+	@media (hover:hover) {
+		&:hover {
+			.lab__title {
+				color: $color-red;
+			}
+			.lab__title::after {
+				content: " ›";
+			}
+		}	
+	}
+
+	@media (min-width: $grid-breakpoint1) {
+		grid-column-end: span 3;
+	}
+
+	@media (min-width: $grid-breakpoint2) {
+		grid-column-end: span 4;
+	}
+
+	@media (min-width: $grid-breakpoint3) {
+		grid-column-end: span 3;
+	}
+}
+
+.lab__thumb {
+	max-width: 100%;
+}
+
+.lab__title {
+	margin-top: 0.8rem;
+}

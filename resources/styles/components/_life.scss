@@ -1,0 +1,55 @@
+// .life {
+// 	@extend %grid__item;
+// 	grid-column-start: 1;
+// 	grid-column-end: span 4;
+
+// 	// line-height: 2.0rem;
+// 	margin-top: 2.4rem;
+// 	font-weight: 300;
+
+// 	@media (min-width: $grid-breakpoint1) {
+// 		// grid-column-start: 4;
+// 		// grid-column-end: span 4;
+// 		grid-column-end: span 8;
+// 	}
+
+// 	@media (min-width: $grid-breakpoint2) {
+// 		// grid-column-end: span 8;
+// 		columns: 2;
+// 	}
+
+// 	@media (min-width: $grid-breakpoint3) {
+// 		grid-column-end: span 9;
+// 		columns: 3;
+// 	}
+// }
+
+
+.life {
+	@extend %grid__item;
+	grid-column-start: 1;
+	grid-column-end: span 4;
+
+	font-weight: 300;
+	column-gap: $grid-gutter-width;
+
+	@media (min-width: $grid-breakpoint1) {
+		grid-column-start: 1;
+		grid-column-end: span 5;
+	}
+
+	@media (min-width: $grid-breakpoint2) {
+		grid-column-start: 1;
+		grid-column-end: span 8;
+		columns: 2;
+	}
+
+	@media (min-width: $grid-breakpoint3) {
+		grid-column-end: span 9;
+		columns: 3;
+	}
+
+	p {
+		margin-bottom: 2.4rem;
+	}
+}

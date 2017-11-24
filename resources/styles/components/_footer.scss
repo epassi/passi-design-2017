@@ -1,0 +1,40 @@
+.footer {
+	grid-area: footer;
+
+	padding-top: 6.4rem;
+	padding-bottom: 6.4rem;
+
+	font-weight: 300;
+
+}
+
+.footer__title {
+	text-transform: uppercase;
+}
+
+.footer__nav {
+	display: flex;
+}
+
+.footer__nav-item {
+	@extend %grid__item;
+	grid-column-end: span 1;
+	color: $color-red;
+	
+	transition: transform $motion-speed-1;
+
+	a {
+		text-decoration: none;
+	}
+
+	&:after {
+		content: " ›";
+		color: #fff;
+	}
+
+	&:hover {
+		&:after {
+			color: $color-red;
+		}
+	}
+}

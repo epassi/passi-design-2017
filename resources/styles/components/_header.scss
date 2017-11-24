@@ -1,0 +1,85 @@
+
+.header {
+	grid-area: header;
+
+	position: sticky;
+	margin-top: 4.0rem;
+	top: 0;
+	left: 0;
+	// top: 4.0rem;
+	// left: 0;
+	// width: 70.0rem;
+
+	background: rgba(255,255,255, 0.8);
+	// backdrop-filter: blur(3px);
+
+	display: flex;
+}
+
+.header__title {
+	background: $color-red;
+	color: #fff;
+	text-transform: uppercase;
+	// padding: 0.8rem 0.8rem 0.8rem 12.8rem;
+	padding-top: 0.8rem;
+	padding-right: 0.8rem;
+	padding-bottom: 0.8rem;
+	padding-left: 2.4rem;
+
+	&:after {
+		content: "EP";
+		@media screen and (min-width: $grid-breakpoint1) {
+			content: "EPassi";
+		}
+		@media screen and (min-width: $grid-breakpoint2) {
+			content: "Emilio Passi";
+		}
+	}
+
+	transition: all $motion-speed-1;
+
+	@media (min-width: $grid-breakpoint1) {
+		padding-left: 3.2rem;
+		transition: all $motion-speed-1;
+	}
+	@media (min-width: $grid-breakpoint2) {
+		padding-left: 6.4rem;
+		transition: all $motion-speed-1;
+	}
+}
+
+.header__nav {
+	display: flex;
+	// align-content: center;
+	// justify-content: center;
+	margin-left: 0.8rem;
+}
+
+.header__nav-item {
+	width: 6.4rem;
+	padding: 0.8rem 0;
+	text-align: center;
+
+	a {
+		text-decoration: none;	
+	}
+
+	// &:nth-child(1) {
+	// 	a {
+	// 		border-bottom: 2px solid #000;	
+	// 	}
+	// }
+
+	&:hover {
+		a {
+			border-bottom: 2px solid #000;	
+		}
+	}
+
+	&--active {
+		@extend .header__nav-item;
+		a {
+			border-bottom: 2px solid #000;	
+		}
+	}
+}
