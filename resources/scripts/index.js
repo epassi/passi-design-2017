@@ -10,13 +10,15 @@ document.addEventListener(`DOMContentLoaded`, event => {
 	);
 
 	router.addEventListener(`change`, event => {
+		let pageName = '';
 		let $labItems = document.getElementsByClassName(`lab`);
 		let $wordItems = document.getElementsByClassName(`word`);
 
 		let activeNavItem = document.getElementsByClassName(`header__nav-item--active`)[0];
 		activeNavItem.className = `header__nav-item`;
 
-		let newActiveNavItem = document.getElementById(event.pageName);
+		let newActivePageName = (event.pageName === '#default') ? 'lab' : event.pageName;
+		let newActiveNavItem = document.getElementById(newActivePageName);
 		newActiveNavItem.className = `header__nav-item--active`;
 
 		for (let $lab of $labItems) {
