@@ -1,4 +1,10 @@
 document.addEventListener(`DOMContentLoaded`, event => {
+	// Allow scroll-to-top via header title.
+	let $headerTitle = document.getElementsByClassName(`header__title`)[0];
+	$headerTitle.addEventListener(`click`, event => {
+		TweenLite.to(document.documentElement, 0.5, {scrollTop:0});
+	});
+
 	const router = new Router(
 		{
 			lab: new Page(`lab.html`),
@@ -34,4 +40,3 @@ document.addEventListener(`DOMContentLoaded`, event => {
 		}
 	});
 });
-

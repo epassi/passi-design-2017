@@ -64,7 +64,7 @@ gulp.task('styles', ['clean:styles'], function() {
 gulp.task('scripts', ['clean:scripts'], function() {
 	return gulp.src(
 		[
-			// 'node_modules/gsap/src/minified/TweenLite.min.js',
+			'node_modules/gsap/src/minified/TweenLite.min.js',
 			'node_modules/jquery/dist/jquery.min.js',
 			'resources/scripts/**/*.js'
 		])
