@@ -7,29 +7,29 @@ document.addEventListener(`DOMContentLoaded`, event => {
 
 	const router = new Router(
 		{
-			lab: new Page(`lab.html`),
+			art: new Page(`art.html`),
 			word: new Page(`word.html`),
 			life: new Page(`life.html`),
-			'#default': new Page(`lab.html`)
+			'#default': new Page(`art.html`)
 		},
 		document.querySelector(`.main`)
 	);
 
 	router.addEventListener(`change`, event => {
 		let pageName = '';
-		let $labItems = document.getElementsByClassName(`lab`);
+		let $artItems = document.getElementsByClassName(`art`);
 		let $wordItems = document.getElementsByClassName(`word`);
 
 		let activeNavItem = document.getElementsByClassName(`header__nav-item--active`)[0];
 		activeNavItem.className = `header__nav-item`;
 
-		let newActivePageName = (event.pageName === '#default') ? 'lab' : event.pageName;
+		let newActivePageName = (event.pageName === '#default') ? 'art' : event.pageName;
 		let newActiveNavItem = document.getElementById(newActivePageName);
 		newActiveNavItem.className = `header__nav-item--active`;
 
-		for (let $lab of $labItems) {
-			$lab.addEventListener(`click`, event => {
-				window.location = $lab.dataset.href;
+		for (let $art of $artItems) {
+			$art.addEventListener(`click`, event => {
+				window.location = $art.dataset.href;
 			});
 		}
 

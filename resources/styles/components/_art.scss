@@ -1,4 +1,4 @@
-// .lab {
+// .art {
 // 	@extend %grid__item;
 // 	grid-column-end: span 4;
 
@@ -18,7 +18,7 @@
 // 	}
 // }
 
-.lab {
+.art {
 	@extend %grid__item;
 	grid-column-end: span 4;
 
@@ -27,10 +27,10 @@
 
 	@media (hover:hover) {
 		&:hover {
-			.lab__title {
+			.art__title {
 				color: $color-red;
 			}
-			.lab__title::after {
+			.art__title::after {
 				content: " ›";
 			}
 		}	
@@ -49,10 +49,10 @@
 	}
 }
 
-.lab__thumb {
+.art__thumb {
 	max-width: 100%;
 }
 
-.lab__title {
+.art__title {
 	margin-top: 0.8rem;
 }
