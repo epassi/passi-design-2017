@@ -1,12 +1,11 @@
 .main {
 	grid-area: main;
-
-
 	padding-top: 3.2rem;	
 
 	// Subgrid
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: $grid-gutter-width;
 
 	@media (min-width: $grid-breakpoint1) {
 		grid-template-columns: repeat(6, 1fr);
@@ -14,23 +13,20 @@
 
 	@media (min-width: $grid-breakpoint2) {
 		grid-template-columns: repeat(8, 1fr);	
-		padding-top: 21.6rem;
+		// padding-top: 21.6rem;
 		// padding-top: 19.2rem;
 		// padding-top: 16.0rem;	
 		// padding-top: 13.6rem;	
+
 	}
 
 	@media (min-width: $grid-breakpoint3) {
-		grid-template-columns: repeat(9, 1fr);	
+		grid-template-columns: repeat(9, 8.5rem);
 	}
 
-	// @media (min-width: $grid-breakpoint4) {
-	// 	padding-top: 50.4rem;	
-	// }
 
+	@media (min-width: $grid-breakpoint1) and (min-height: 700px) {
+		padding-top: 21.6rem;
+	}
 
-
-	// @media (min-height: 1000px) {
-	// 	padding-top: 24.0rem;
-	// }
 }

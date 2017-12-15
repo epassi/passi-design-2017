@@ -30,9 +30,6 @@
 	@media (min-width: $grid-breakpoint1) {
 		grid-column-end: span 6;
 		grid-template-columns: repeat(6, 1fr);
-		// grid-template-areas:
-		// 	". title title title title title image image"
-		// 	". description description description description description image image";
 		grid-template-areas:
 			"title title title title image image"
 			"description description description description image image";
@@ -56,19 +53,19 @@
 }
 
 .word__thumb {
-	@extend %grid__item;
+	// @extend %grid__item;
 	max-width: 10.0rem;
 	grid-area: image;
 }
 
 .word__title {
-	@extend %grid__item;
+	// @extend %grid__item;
 	grid-area: title;
 	margin-bottom: 0.8rem;
 }
 
 .word__description {
-	@extend %grid__item;
+	// @extend %grid__item;
 	font-weight: 300;
 	padding-right: $grid-gutter-width / 2;
 	grid-area: description;

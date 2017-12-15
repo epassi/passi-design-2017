@@ -3,15 +3,12 @@
 	grid-area: header;
 
 	position: sticky;
+	margin-left: -$grid-gutter-width;
 	margin-top: 4.0rem;
 	top: 0;
 	left: 0;
-	// top: 4.0rem;
-	// left: 0;
-	// width: 70.0rem;
 
 	background: rgba(255,255,255, 0.8);
-	// backdrop-filter: blur(3px);
 
 	display: flex;
 }
@@ -20,7 +17,6 @@
 	background: $color-red;
 	color: #fff;
 	text-transform: uppercase;
-	// padding: 0.8rem 0.8rem 0.8rem 12.8rem;
 	padding-top: 0.8rem;
 	padding-right: 0.8rem;
 	padding-bottom: 0.8rem;
@@ -50,8 +46,6 @@
 
 .header__nav {
 	display: flex;
-	// align-content: center;
-	// justify-content: center;
 	margin-left: 0.8rem;
 }
 
@@ -63,12 +57,6 @@
 	a {
 		text-decoration: none;	
 	}
-
-	// &:nth-child(1) {
-	// 	a {
-	// 		border-bottom: 2px solid #000;	
-	// 	}
-	// }
 
 	&:hover {
 		a {
