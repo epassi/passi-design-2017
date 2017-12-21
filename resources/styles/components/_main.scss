@@ -24,9 +24,12 @@
 		grid-template-columns: repeat(9, 8.5rem);
 	}
 
-
 	@media (min-width: $grid-breakpoint1) and (min-height: 700px) {
 		padding-top: 21.6rem;
+	}
+
+	@media (min-width: $grid-breakpoint4) and (min-height: 700px) {
+		padding-top: 38.4rem;
 	}
 
 }
