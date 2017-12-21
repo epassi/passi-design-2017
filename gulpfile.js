@@ -72,6 +72,7 @@ gulp.task('scripts', ['clean:scripts'], function() {
 	return gulp.src(
 		[
 			'node_modules/gsap/src/minified/TweenLite.min.js',
+			'node_modules/gsap/src/minified/plugins/ScrollToPlugin.min.js',
 			'node_modules/jquery/dist/jquery.min.js',
 			'resources/scripts/**/*.js'
 		])

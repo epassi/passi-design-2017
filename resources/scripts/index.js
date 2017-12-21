@@ -5,7 +5,8 @@ document.addEventListener(`DOMContentLoaded`, event => {
 	// Allow scroll-to-top via header title.
 	let $headerTitle = document.getElementsByClassName(`header__title`)[0];
 	$headerTitle.addEventListener(`click`, event => {
-		TweenLite.to(document.documentElement, 0.5, {scrollTop:0});
+		// Animate window.scrollTo(0, 0)
+		TweenLite.to(window, 0.5, {scrollTo:{y:0, autoKill:false}}); // autoKill:false fixes jumpy scroll on iOS
 	});
 
 	const router = new Router(
@@ -44,7 +45,7 @@ document.addEventListener(`DOMContentLoaded`, event => {
 	});
 
 	document.addEventListener(`scroll`, event => {
-		if (window.scrollY >= HEADER_SHADOW_THRESHOLD) {
+		if (window.pageYOffset >= HEADER_SHADOW_THRESHOLD) {
 			document.querySelector(`header`).className = `header--flush`;
 		} else {
 			document.querySelector(`header`).className = `header`;
