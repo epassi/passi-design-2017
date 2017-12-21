@@ -4,13 +4,19 @@
 
 	position: sticky;
 	margin-left: -$grid-gutter-width;
+	margin-right: -$grid-gutter-width;
 	margin-top: 4.0rem;
 	top: 0;
 	left: 0;
 
-	background: rgba(255,255,255, 0.8);
-
 	display: flex;
+	background: #fff;
+}
+
+.header--flush {
+	@extend .header;
+	box-shadow: 0 0.4rem 0.4rem 0.1rem rgba(0,0,0, 0.15);
+	box-shadow: 0 0 0.2rem 0.1rem rgba(0,0,0, 0.15);
 }
 
 .header__title {

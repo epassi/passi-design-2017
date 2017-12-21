@@ -1,3 +1,6 @@
+const HEADER_SHADOW_THRESHOLD = 40; // Pixels scrolled before shadow appears.
+
+
 document.addEventListener(`DOMContentLoaded`, event => {
 	// Allow scroll-to-top via header title.
 	let $headerTitle = document.getElementsByClassName(`header__title`)[0];
@@ -37,6 +40,14 @@ document.addEventListener(`DOMContentLoaded`, event => {
 			$word.addEventListener(`click`, event => {
 				window.location = $word.dataset.href;
 			});
+		}
+	});
+
+	document.addEventListener(`scroll`, event => {
+		if (window.scrollY >= HEADER_SHADOW_THRESHOLD) {
+			document.querySelector(`header`).className = `header--flush`;
+		} else {
+			document.querySelector(`header`).className = `header`;
 		}
 	});
 });
