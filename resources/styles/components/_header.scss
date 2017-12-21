@@ -10,13 +10,8 @@
 	left: 0;
 
 	display: flex;
-	background: #fff;
-}
-
-.header--flush {
-	@extend .header;
-	box-shadow: 0 0.4rem 0.4rem 0.1rem rgba(0,0,0, 0.15);
-	box-shadow: 0 0 0.2rem 0.1rem rgba(0,0,0, 0.15);
+	background: rgba(255,255,255, 0.95);
+	backdrop-filter: blur(1.5px);
 }
 
 .header__title {

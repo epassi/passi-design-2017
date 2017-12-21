@@ -43,12 +43,4 @@ document.addEventListener(`DOMContentLoaded`, event => {
 			});
 		}
 	});
-
-	document.addEventListener(`scroll`, event => {
-		if (window.pageYOffset >= HEADER_SHADOW_THRESHOLD) {
-			document.querySelector(`header`).className = `header--flush`;
-		} else {
-			document.querySelector(`header`).className = `header`;
-		}
-	});
 });
