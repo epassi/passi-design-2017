@@ -1,6 +1,3 @@
-const HEADER_SHADOW_THRESHOLD = 40; // Pixels scrolled before shadow appears.
-
-
 document.addEventListener(`DOMContentLoaded`, event => {
 	// Allow scroll-to-top via header title.
 	let $headerTitle = document.getElementsByClassName(`header__title`)[0];
