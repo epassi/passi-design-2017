@@ -4,7 +4,7 @@
 class Router extends Reactor {
 	constructor(routes, view) {
 		super();
-		this.registerEvent(`change`);
+		this.registerEvent(`urlChange`);
 
 		this.routes = routes;
 		this.view = view;
@@ -26,6 +26,6 @@ class Router extends Reactor {
 		await page.load();
 		this.view.innerHTML = ``;
 		page.show(this.view);
-		this.dispatchEvent(`change`, {pageName});
+		this.dispatchEvent(`urlChange`, {pageName});
 	}
 }

@@ -16,7 +16,7 @@ document.addEventListener(`DOMContentLoaded`, event => {
 		document.querySelector(`.main`)
 	);
 
-	router.addEventListener(`change`, event => {
+	router.addEventListener(`urlChange`, event => {
 		let pageName = '';
 		let $artItems = document.getElementsByClassName(`art`);
 		let $wordItems = document.getElementsByClassName(`word`);
@@ -27,6 +27,11 @@ document.addEventListener(`DOMContentLoaded`, event => {
 		let newActivePageName = (event.pageName === '#default') ? 'art' : event.pageName;
 		let newActiveNavItem = document.getElementById(newActivePageName);
 		newActiveNavItem.className = `header__nav-item--active`;
+
+		// Google Analytics
+		// ga('set', 'page', `/{$newActivePageName}`);
+		// ga('send', 'pageview');
+		gtag('config', 'UA-110662365-1', {'page_path': `/#/${newActivePageName}`});
 
 		for (let $art of $artItems) {
 			$art.addEventListener(`click`, event => {
